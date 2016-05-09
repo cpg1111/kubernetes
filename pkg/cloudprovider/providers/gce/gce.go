@@ -122,7 +122,7 @@ func getProjectAndZone() (string, string, error) {
 }
 
 func getInstanceIDViaMetadata() (string, error) {
-	result, err := metadata.Get("instance/instanceName")
+	result, err := metadata.Get("instance/hostname")
 	if err != nil {
 		return "", err
 	}
